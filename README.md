@@ -1,0 +1,1 @@
+RGR_AI12_Ryzhov_Shipulin_Andrianov
