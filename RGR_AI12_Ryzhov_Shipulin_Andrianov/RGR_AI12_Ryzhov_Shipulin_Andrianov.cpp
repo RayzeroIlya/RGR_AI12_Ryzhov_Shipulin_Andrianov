@@ -5,22 +5,21 @@
 using namespace std;
 
 int Vijiner();
-
+void encrypt(string key, string wordfoenc);
 map<int, vector<char>> TableEng;
+vector<char>Case = { 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' };
 
 int main(){
-	
 
-
-	setlocale(LC_ALL, "Rus");
 	Vijiner();
+	encrypt("LOX", "GAYLORD");
+	setlocale(LC_ALL, "Rus");
+
 	
 }
 
 int Vijiner() {
-    vector<char>Case = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};// и так понятно что это
-    /*std:vector<char>Symbol = { ' ', '+','!','@','#','$','%','^','&','*','[',']',')','(','=','`',':',';','{','}','.',',','<','>','"','?','/','\'' }*///; // это тоже понятно
-	map<int, vector<char>> TableEng;
+	cout << '\t' << '\t' << "Vijiner's Table for English" << '\n' << '\n';
 	for (int KeyTable = 0; KeyTable < Case.size();KeyTable++) {
 			char SymbolMove;
 			TableEng[KeyTable] = Case;
@@ -34,15 +33,37 @@ int Vijiner() {
 			Case.push_back(SymbolMove);
 
 	}
-	cout << '\t' << '\t' << "Vijiner's Table for English" << '\n' << '\n';
 
 
 	
 	
 	return 0;
 }
-void encrypt(string key) {
+void encrypt(string key,string wordfoenc) {
+	if (key.size() < wordfoenc.size()) {
+		for (int i = key.size(), k = 0;i < wordfoenc.size();i++,k++) {
+			key = key + key[k];		
+		}
+	}
+	string EncWord;
+	int IndexKey = 0;
+	int IndexSymb = 0;
+	for (int i = 0; i < key.size();i++) {
+		for (int n = 0;n < Case.size();n++) {
+			if (Case[n] == key[i]) {
+				IndexKey = n;
+				break;
+			}
+		}
+		for (int n = 0;n < Case.size();n++) {
+			if (Case[n] == wordfoenc[i]) {
+				IndexSymb = n;
+				break;
+			}
+		}
 
-
-
+		vector<char> encr = TableEng[IndexKey];
+		EncWord += encr[IndexSymb];
+	}
+	cout << '\t' << EncWord << '\n';
 }
