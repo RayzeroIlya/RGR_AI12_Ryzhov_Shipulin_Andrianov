@@ -1,4 +1,5 @@
 ﻿  RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp
-D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(59,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(88,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(74,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(121,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(170): warning C4715: isReg: значение возвращается не при всех путях выполнения
   RGR_AI12_Ryzhov_Shipulin_Andrianov.vcxproj -> D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\x64\Debug\RGR_AI12_Ryzhov_Shipulin_Andrianov.exe
