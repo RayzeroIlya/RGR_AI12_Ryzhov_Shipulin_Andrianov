@@ -151,6 +151,9 @@
     <ClInclude Include="vijfunc.h" />
     <ClInclude Include="vijglobal.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bibliotec.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
