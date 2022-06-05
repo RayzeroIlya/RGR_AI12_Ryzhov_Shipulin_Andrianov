@@ -139,7 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="isReg.cpp" />
+    <ClCompile Include="VijDec.cpp" />
+    <ClCompile Include="VijTable.cpp" />
+    <ClCompile Include="VijEnc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="isReg.h" />
+    <ClInclude Include="vijfunc.h" />
+    <ClInclude Include="vijglobal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
