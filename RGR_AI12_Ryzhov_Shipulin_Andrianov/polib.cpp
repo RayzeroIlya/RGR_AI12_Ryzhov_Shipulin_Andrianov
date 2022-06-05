@@ -10,7 +10,7 @@ void polib()
 		const int m = 6;
 		const int n = 6;
 		int i, j;
-		cout << "Çäðàâñòâóéòå, ýòî øèôð êâàäðàòà Ïîëèáèÿ" << endl;
+		cout << "Квадрат Полибия" << endl;
 		char A[m][n] = { {'А', 'Б', 'В', 'Г', 'Д','Е' },
 		{'Ж', 'З', 'И', 'К', 'Л', 'М' },
 		{'Н', 'О', 'П', 'Р', 'С', 'Т' },
@@ -25,7 +25,7 @@ void polib()
 			}
 			cout << endl;
 		}
-		cout << "Ââåäèòå ñëîâî : ";
+		cout << "Введите слово буквами верхнего регистра : ";
 		cin >> string;
 		for (int k = 0; k < strlen(string); k++)
 		{
@@ -42,5 +42,4 @@ void polib()
 		}
 		cout << endl;
 	}
-	system("pause");
 }
