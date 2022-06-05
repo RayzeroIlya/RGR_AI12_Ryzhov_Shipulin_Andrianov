@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="vijmain.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="isReg.cpp" />
     <ClCompile Include="VijDec.cpp" />
     <ClCompile Include="VijTable.cpp" />

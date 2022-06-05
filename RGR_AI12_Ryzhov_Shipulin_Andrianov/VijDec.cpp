@@ -1,6 +1,7 @@
 #include "vijglobal.h"
 #include "isReg.h"
 
+
 string decrypt(string key, string wordfodec) {
 	if (key.size() < wordfodec.size()) {
 		for (int i = key.size(), k = 0;i < wordfodec.size();i++, k++) {
