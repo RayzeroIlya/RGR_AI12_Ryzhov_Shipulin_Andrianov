@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="isReg.cpp" />
+    <ClCompile Include="keycheck.cpp" />
     <ClCompile Include="VijDec.cpp" />
     <ClCompile Include="VijTable.cpp" />
     <ClCompile Include="VijEnc.cpp" />

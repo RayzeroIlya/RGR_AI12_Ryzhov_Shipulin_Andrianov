@@ -30,6 +30,9 @@
     <ClCompile Include="isReg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="keycheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vijglobal.h">

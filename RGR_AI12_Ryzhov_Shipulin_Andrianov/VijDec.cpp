@@ -1,18 +1,13 @@
 #include "vijglobal.h"
 #include "isReg.h"
 
+void decrypt(string key, string wordfodec) {
 
-string decrypt(string key, string wordfodec) {
-	if (key.size() < wordfodec.size()) {
-		for (int i = key.size(), k = 0;i < wordfodec.size();i++, k++) {
-			key = key + key[k];
-		}
-	}
 	string DecWord;
 	int IndexKey = 0;
 	int IndexSymb = 0;
 	vector<char> ActiveTable;
-	for (int i = 0; i < key.size();i++) {
+	for (int i = 0, h =0; i < key.size();i++,h++) {
 		if (wordfodec[i] == ' ') {
 			DecWord += wordfodec[i];
 			i++;
@@ -22,7 +17,7 @@ string decrypt(string key, string wordfodec) {
 		}
 		else ActiveTable = CaseEngLow;
 		for (int n = 0;n < ActiveTable.size();n++) {
-			if (ActiveTable[n] == key[i]) {
+			if ((CaseEng[n] == key[h]) || (CaseEngLow[n] == key[h])) {
 				IndexKey = n;
 				break;
 			}
@@ -38,12 +33,12 @@ string decrypt(string key, string wordfodec) {
 		}
 		if (ActiveTable == CaseEng) {
 			vector<char> encr = TableEng[0];
-			DecWord += encr[IndexSymb];
+			DecWord += encr[(IndexSymb-IndexKey +26)%26];
 		}
 		else {
 			vector<char> encr = TableEngLow[0];
-			DecWord += encr[IndexSymb];
+			DecWord += encr[(IndexSymb-IndexKey + 26)%26];
 		}
 	}
-	return DecWord;
+	cout << "Дешифрованный текст: " << DecWord << endl;
 }

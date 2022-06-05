@@ -7,14 +7,27 @@ map<int, vector<char>> TableEng;
 map<int, vector<char>> TableEngLow;
 
 int main() {
-	string word;
-	cin >> word;
-	string key;
-	cin >> key;
-	Vijiner();
-	string EncWord = encrypt(key, word);
-	string DecWrod = decrypt(key, word);
-	cout << EncWord << "\t" << DecWrod;
-	return 0;
+	setlocale(LC_ALL, "ru");
+	int exit = 1;
+	while (exit == 1) {
+		cout << "Введите текст для шифровки и дешифровки на английском языке: " << endl;
+		string checklist;
+		getline(cin, checklist);
+		/*block for caesar
+		*/
+		/*
+		block for polobiya
+		*/
+		/*block for vijiner*/
+		cout << "\t" << "Шифр Вижинера" << "\n";
+		cout << "Введите ключ для шифровки и деширофки алгоритмом Вижинера: ";
+		string key;
+		cin >> key;
+		key = keycheck(key, checklist);
+		Vijiner();
+		string EncWord = encrypt(key, checklist);
+		decrypt(key, EncWord);
+
+	}
 }
 

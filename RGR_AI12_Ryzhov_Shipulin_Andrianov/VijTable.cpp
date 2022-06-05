@@ -1,7 +1,7 @@
 #include "vijglobal.h"
 
 void Vijiner() {
-	cout << '\t' << '\t' << "Vijiner's Table for English Upper" << '\n' << '\n';
+	cout << '\t' << '\t' << "Таблица Вижинера для букв верхнего регистра" << '\n' << '\n';
 	for (int KeyTable = 0; KeyTable < CaseEng.size();KeyTable++) {
 		char SymbolMove;
 		TableEng[KeyTable] = CaseEng;
@@ -15,7 +15,7 @@ void Vijiner() {
 		CaseEng.push_back(SymbolMove);
 
 	}
-	cout << '\t' << '\t' << "Vijiner's Table for English Lower" << '\n' << '\n';
+	cout << '\t' << '\t' << "Таблица Вижинера для букв нижнего регистра" << '\n' << '\n';
 	for (int KeyTable = 0; KeyTable < CaseEngLow.size();KeyTable++) {
 		char SymbolMove;
 		TableEngLow[KeyTable] = CaseEngLow;
