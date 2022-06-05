@@ -2,16 +2,12 @@
 #include "isReg.h"
 
 string encrypt(string key, string wordfoenc) {
-	if (key.size() < wordfoenc.size()) {
-		for (int i = key.size(), k = 0;i < wordfoenc.size();i++, k++) {
-			key = key + key[k];
-		}
-	}
+
 	string EncWord;
 	int IndexKey = 0;
 	int IndexSymb = 0;
 	vector<char> ActiveTable;
-	for (int i = 0, h = 0; i < key.size();i++, h++) {
+	for (int i = 0,  h = 0;i < key.size();i++, h++) {
 		if (wordfoenc[i] == ' ') {
 			EncWord += wordfoenc[i];
 			i++;
@@ -22,7 +18,7 @@ string encrypt(string key, string wordfoenc) {
 		else ActiveTable = CaseEngLow;
 
 		for (int n = 0;n < ActiveTable.size();n++) {
-			if (ActiveTable[n] == key[h]) {
+			if ((CaseEng[n] == key[h]) || (CaseEngLow[n] == key[h])) {
 				IndexKey = n;
 				break;
 			}
@@ -44,6 +40,7 @@ string encrypt(string key, string wordfoenc) {
 			EncWord += encr[IndexSymb];
 		}
 	}
+	cout << "Зашифрованный текс: " << EncWord << endl;
 	return EncWord;
 }
 

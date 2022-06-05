@@ -3,7 +3,8 @@
 bool isReg(char symbol) {
 	for (int i = 0;i < CaseEng.size();i++) {
 		if (symbol == CaseEng[i]) return true;
-		else return false;
 	}
-	return false;
+	for (int i = 0;i < CaseEngLow.size();i++) {
+		if (symbol == CaseEngLow[i]) return false;
+	}
 }

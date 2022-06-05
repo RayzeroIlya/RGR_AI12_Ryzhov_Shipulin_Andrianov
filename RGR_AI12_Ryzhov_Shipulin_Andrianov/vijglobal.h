@@ -1,6 +1,7 @@
 #include <map>
 #include <vector>
 #include <iostream>
+#include <string>
 
 using namespace std;
 extern vector<char>CaseEng;
