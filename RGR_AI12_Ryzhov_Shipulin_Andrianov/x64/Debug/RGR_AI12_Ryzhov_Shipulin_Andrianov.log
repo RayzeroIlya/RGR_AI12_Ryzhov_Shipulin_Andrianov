@@ -1,5 +1,38 @@
-﻿  RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp
-D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(74,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(121,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp(170): warning C4715: isReg: значение возвращается не при всех путях выполнения
-  RGR_AI12_Ryzhov_Shipulin_Andrianov.vcxproj -> D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\x64\Debug\RGR_AI12_Ryzhov_Shipulin_Andrianov.exe
+﻿  VijDec.cpp
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijDec.cpp(6,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijDec.cpp(20,18): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijDec.cpp(22,22): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijDec.cpp(38,22): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijDec.cpp(39,24): error C2065: TableEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijDec.cpp(43,24): error C2065: TableEngLow: необъявленный идентификатор
+  VijEnc.cpp
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijEnc.cpp(5,3): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijEnc.cpp(19,18): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijEnc.cpp(21,22): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijEnc.cpp(37,22): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijEnc.cpp(38,24): error C2065: TableEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijEnc.cpp(42,24): error C2065: TableEngLow: необъявленный идентификатор
+  VijTable.cpp
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(5,36): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(7,3): error C2065: TableEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(7,24): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(8,16): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(10,23): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(11,12): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(14,3): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(14,17): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(15,3): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(19,36): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(21,3): error C2065: TableEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(21,27): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(22,16): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(24,23): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(25,12): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(28,3): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(28,20): error C2065: CaseEngLow: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\VijTable.cpp(29,3): error C2065: CaseEngLow: необъявленный идентификатор
+  isReg.cpp
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\isReg.cpp(3,21): error C2065: CaseEng: необъявленный идентификатор
+D:\programming\rgr 2 sem\RGR_AI12_Ryzhov_Shipulin_Andrianov\RGR_AI12_Ryzhov_Shipulin_Andrianov\isReg.cpp(4,17): error C2065: CaseEng: необъявленный идентификатор
+  vijmain.cpp
+  Создание кода...
