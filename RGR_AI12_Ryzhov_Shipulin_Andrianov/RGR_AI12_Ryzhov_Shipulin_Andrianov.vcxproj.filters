@@ -33,6 +33,12 @@
     <ClCompile Include="keycheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="polib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="caesar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vijglobal.h">
@@ -42,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="isReg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="caesar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

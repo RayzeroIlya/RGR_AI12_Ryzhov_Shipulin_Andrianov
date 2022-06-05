@@ -142,11 +142,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="isReg.cpp" />
     <ClCompile Include="keycheck.cpp" />
+    <ClCompile Include="polib.cpp" />
+    <ClCompile Include="caesar.cpp" />
     <ClCompile Include="VijDec.cpp" />
     <ClCompile Include="VijTable.cpp" />
     <ClCompile Include="VijEnc.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="caesar.h" />
     <ClInclude Include="isReg.h" />
     <ClInclude Include="vijfunc.h" />
     <ClInclude Include="vijglobal.h" />
