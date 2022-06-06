@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RGR_AI12_Ryzhov_Shipulin_Andrianov.cpp">
+    <ClCompile Include="PolibCons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolibDoc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
