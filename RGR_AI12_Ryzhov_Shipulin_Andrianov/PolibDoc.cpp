@@ -1,7 +1,7 @@
 #include "bibliotec.h"
 
 
-int mainy() {
+int PolibDoc() {
     setlocale(LC_ALL, "russian");
     system("chcp 1251");
     system("cls");

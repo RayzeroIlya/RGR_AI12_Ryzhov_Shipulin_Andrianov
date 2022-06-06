@@ -1,6 +1,6 @@
 #include "bibliotec.h"
 
-int main() {
+int PolibCons() {
     setlocale(LC_ALL, "russian");
     system("chcp 1251");
     system("cls");
