@@ -6,6 +6,16 @@ string encrypt(string key, string wordfoenc) {
 	string EncWord;
 	int IndexKey = 0;
 	int IndexSymb = 0;
+	for (int i = 0;i < wordfoenc.size();i++) {
+		if (alphacheck(3, wordfoenc[i])&& alphacheck(3, key[i]));
+		else {
+			if (wordfoenc[i] == ' ') i = i;
+			else {
+				wordfoenc[0] = '{';
+				return wordfoenc;
+			}
+		}
+	}
 	vector<char> ActiveTable;
 	for (int i = 0,  h = 0;i < key.size();i++, h++) {
 		if (wordfoenc[i] == ' ') {

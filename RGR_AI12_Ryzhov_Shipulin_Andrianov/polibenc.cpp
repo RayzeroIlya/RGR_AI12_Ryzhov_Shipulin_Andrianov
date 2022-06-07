@@ -1,12 +1,10 @@
 ﻿#include "bibliotec.h"
 
-char* polibenc(char* string)
+vector<int> polibenc(char* string)
 
 {
-	system("chcp 1251");
-	system("cls");
+	vector<int> nums;
 	{
-		//char* string = new char[36];
 		const int m = 6;
 		const int n = 6;
 		int i, j;
@@ -25,8 +23,7 @@ char* polibenc(char* string)
 			}
 			cout << endl;
 		}
-		//cout << "Введите слово буквами верхнего регистра : ";
-		//cin >> string;
+
 		for (int k = 0; k < strlen(string); k++)
 		{
 			for (i = 0; i < m; i++)
@@ -35,12 +32,14 @@ char* polibenc(char* string)
 				{
 					if (string[k] == A[i][j])
 					{
-						cout << i + 1 << j + 1 << setw(2);
+						/*cout << i + 1 << j + 1 << setw(2);*/
+						nums.push_back(i + 1);
+						nums.push_back(j + 1);
 					}
 				}
 			}
 		}
 		cout << endl;
 	}
-	return string;
+	return nums;
 }

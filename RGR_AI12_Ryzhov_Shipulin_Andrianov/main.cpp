@@ -21,7 +21,6 @@ int main() {
 		int inchoose;
 		cin >> inchoose;
 		string text;
-
 		switch (inchoose)
 		{
 		case (0): {
@@ -54,8 +53,13 @@ int main() {
 					cin.seekg(cin.eof());
 					char msg[80];
 					cin.getline(msg, 80);
+					
 
 					EncWordc = caesar(msg);
+					if (EncWordc[0] == '{') {
+						cout << "Используется неверный алфавит!" << endl;
+						break;
+					}
 					cout << "Полученное закодированное сообщение: " << endl;
 					cout << EncWordc << endl;
 					break;
@@ -74,6 +78,10 @@ int main() {
 						char msg[80];
 						cin.getline(msg, 80);
 						DecWordc = caesardec(msg);
+						if (DecWordc[0] == '{') {
+							cout << "Используется неверный алфавит!" << endl;
+							break;
+						}
 						cout << "\nРаскодированное сообщение:\n\n" << DecWordc << endl << endl;
 						break;
 
@@ -102,29 +110,42 @@ int main() {
 				cout << "Зашифровать :: 1" << endl << "Дешифровать :: 2" << endl;
 				cout << "Ваш выбор: ";
 				cin >> ecdc;
+				char* textp = new char[36];
 				switch (ecdc)
 				{
 				case(1): {
 					cout << "Введите слово для шифровки русскими заглавными буквами: ";
 
-					char* textp = new char[36];
-					cin >> textp;
-					polibenc(textp);
 
-				}
+					cin >> textp;
+					for (int i = 0;i < strlen(textp);i++) {
+						if (alphacheck(2, textp[i])) continue;
+						else {
+							textp[0] = '{';
+						}
+					}
+						if (textp[0] == '{') {
+							cout << "Используется неверный алфавит!" << endl;
+							break;
+						}
+						vector<int>EncWordP = polibenc(textp);
+						for (int n : EncWordP) {
+							cout << n;
+						}
+						break;
+					}
 				case(2): {
 
 				}
 				default:
 					break;
 				}
-
-				cout << "=====================================================" << "\n";
-				system("pause");
-				system("cls");
-				break;
-
-			}
+				
+					   cout <<"\n" << "=====================================================" << "\n";
+					   system("pause");
+					   system("cls");
+					   break;
+				}
 			case (3): {
 				cout << "=====================================================" << "\n";
 				cout << "\t" << "Шифр Вижинера" << "\n";
@@ -144,6 +165,10 @@ int main() {
 					cin >> key;
 					key = keycheck(key, text);
 					EncWord = encrypt(key, text);
+					if (EncWord[0] == '{') {
+						cout << "Используется неверный алфавит!" << endl;
+						break;
+					}
 					break;
 				}
 				case(2): {
@@ -160,6 +185,10 @@ int main() {
 						cin >> key;
 						key = keycheck(key, text);
 						text = decrypt(key, text);
+						if (text[0] == '{') {
+							cout << "Используется неверный алфавит!" << endl;
+							break;
+						}
 					}
 					case(2): {
 						cout << "Введи ключ для дешифровки: ";
@@ -171,6 +200,11 @@ int main() {
 						cin >> key;
 						key = keycheck(key, EncWord);
 						text = decrypt(key, EncWord);
+						if (text[0] == '{') {
+							cout << "Используется неверный алфавит!" << endl;
+							cout << "Зашифруйте слово еще раз для использования!" << endl;
+							break;
+						}
 					}
 						   break;
 					}
@@ -218,16 +252,18 @@ int main() {
 				switch (ecdc)
 				{
 				case(1): {
-					ifstream fin("caesartext.txt");
-					char msg[80];
-					fin.getline(msg,80);
-					fin.close();
-					EncWordc = caesar(msg);
-					ofstream fout("caesarout.txt",ios_base::trunc);
-					fout << EncWordc;
-					fout.close();
-					system("pause");
-					system("cls");
+				ifstream fin("caesartext.txt");
+				char msg[80];
+				fin.getline(msg,80);
+				fin.close();
+				EncWordc = caesar(msg);
+				if (EncWordc[0] == '{') {
+					cout << "Используется неверный алфавит!" << endl;
+					break;
+				}
+				ofstream fout("caesarout.txt",ios_base::trunc);
+				fout << EncWordc;
+				fout.close();
 					break;
 
 				}
@@ -237,12 +273,62 @@ int main() {
 					fin.getline(msg, 80);
 					fin.close();
 					DecWordc = caesardec(msg);
+					if (DecWordc[0] == '{') {
+						cout << "Используется неверный алфавит!" << endl;
+						break;
+					}
 					ofstream fout("caesarout.txt", ios_base::trunc);
 					fout << DecWordc;
 					fout.close();
-					system("pause");
-					system("cls");
 					break;
+				}
+				default:
+					break;
+				}
+				system("pause");
+				system("cls");
+				cout << "=====================================================" << "\n";
+
+
+
+
+			}
+			case (2): {
+				cout << "=====================================================" << "\n";
+				cout << "Шифр Полибия" << "\n";
+				cout << "Зашифровать :: 1" << endl << "Дешифровать :: 2" << endl;
+				cout << "Ваш выбор: ";
+				cin >> ecdc;
+				switch (ecdc)
+				{
+				case(1): {
+					ifstream fin("polibtext.txt");
+					char* textp = new char[36];
+					fin.getline(textp,36);
+					fin.close();
+					for (int i = 0;i < strlen(textp);i++) {
+						if (alphacheck(2, textp[i]));
+						else {
+							textp[0] = '{';
+						}
+						if (textp[0] == '{') {
+							cout << "Используется неверный алфавит!" << endl;
+							break;
+						}
+					}
+						vector<int>EncWordP = polibenc(textp);
+						ofstream fout("polibout.txt", ios_base::trunc);
+						for (int n : EncWordP) {
+							fout << n;
+						}
+						fout.close();
+						system("pause");
+						system("cls");
+						break;
+					}
+				case(2): {
+
+
 				}
 				default:
 					break;
@@ -252,14 +338,11 @@ int main() {
 
 
 
-			}
-			case (2): {
-
-
-
+				cout << "=====================================================" << "\n";
 				break;
 			}
 			case (3): {
+				cout << "=====================================================" << "\n";
 				cout << "\t" << "Шифр Вижинера" << "\n";
 				Vijiner();
 				cout << "Зашифровать :: 1" << endl << "Дешифровать :: 2" << endl;
@@ -278,6 +361,10 @@ int main() {
 					cin >> key;
 					key = keycheck(key, text);
 					fEncWord = encrypt(key, text);
+					if (fEncWord[0] == '{') {
+						cout << "Используется неверный алфавит!" << endl;
+						break;
+					}
 					ofstream fout("vijout.txt");
 					fout << fEncWord;
 					fout.close();
@@ -294,6 +381,10 @@ int main() {
 					cin >> key;
 					key = keycheck(key, text);
 					string fDecWord = decrypt(key, text);
+					if (fDecWord[0] == '{') {
+						cout << "Используется неверный алфавит!" << endl;
+						break;
+					}
 					ofstream fout("vijout.txt", ios_base::trunc);
 					fout << fDecWord;
 					fout.close();
@@ -302,6 +393,10 @@ int main() {
 				default:
 					break;
 				}
+
+				cout << "=====================================================" << "\n";
+				system("pause");
+				system("cls");
 				break;
 			}
 			default: {

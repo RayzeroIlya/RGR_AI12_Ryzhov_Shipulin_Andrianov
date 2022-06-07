@@ -6,6 +6,17 @@ string decrypt(string key, string wordfodec) {
 	string DecWord;
 	int IndexKey = 0;
 	int IndexSymb = 0;
+	for (int i = 0;i < wordfodec.size();i++) {
+		if (alphacheck(3, wordfodec[i]) && alphacheck(3, key[i]));
+		else {
+			if (wordfodec[i] == ' ') i = i;
+			else{
+			wordfodec[0] = '{';
+			return wordfodec;
+			}
+		}
+
+	}
 	vector<char> ActiveTable;
 	for (int i = 0, h =0; i < key.size();i++,h++) {
 		if (wordfodec[i] == ' ') {

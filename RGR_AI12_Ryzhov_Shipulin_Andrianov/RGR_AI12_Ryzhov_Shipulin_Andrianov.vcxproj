@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="alphacheck.cpp" />
     <ClCompile Include="caesardec.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="isReg.cpp" />

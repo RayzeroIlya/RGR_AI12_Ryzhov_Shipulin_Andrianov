@@ -5,3 +5,4 @@
 using namespace std;
 char *caesar(char msg[80]);
 char *caesardec(char msg[80]);
+bool alphacheck(int shifr, char symbol);
