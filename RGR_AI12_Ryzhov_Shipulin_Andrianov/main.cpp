@@ -6,9 +6,10 @@ map<int, vector<char>> TableEng;
 map<int, vector<char>> TableEngLow;
 
 int main() {	
-	char* DecWordc;
+	char* DecWordc = nullptr;
 	char* EncWordc = nullptr;
 	string EncWord;
+	vector<int>EncWordP;
 	system("chcp 1251");
 	setlocale(LC_ALL, "ru");
 	system("cls");
@@ -87,6 +88,10 @@ int main() {
 
 					}
 					case(2): {
+						if (DecWordc == nullptr) {
+							cout << "Сообщение пустое";
+							break;
+						}
 						DecWordc = caesardec(EncWordc);
 						cout << "\nРаскодированное сообщение:\n\n" << DecWordc << endl << endl;
 						break;
@@ -128,13 +133,50 @@ int main() {
 							cout << "Используется неверный алфавит!" << endl;
 							break;
 						}
-						vector<int>EncWordP = polibenc(textp);
+						EncWordP = polibenc(textp);
 						for (int n : EncWordP) {
 							cout << n;
 						}
 						break;
 					}
 				case(2): {
+					cout << "Ввести новое сообщение:: 1" << "\n" << "Использовать прошлое сообщение :: 2" << endl;
+					cout << "Ваш выбор: ";
+					int ecdc;
+					cin >> ecdc;
+					switch (ecdc)
+					{
+					case(1): {
+						cout << "Введите сообщение для дешифровки парами цифр(Введите либое НЕ число чтобы остановить ввод: ";
+						vector<int> nums;
+						int n1;
+						while (cin >> n1) {
+							if (n1 % 10 > 6 or n1 / 10 > 6) {
+								cout << "Введите другое число: ";
+								continue;
+							}
+							nums.push_back(n1);
+						}
+						string text = polibdec(nums);
+						cout << "Дешифрованое сообщение: " << text;
+						break;
+					}
+					case(2): {	
+						vector<int> nums;
+						for (int i = 0;i < EncWordP.size();i+=2) {
+							stringstream stream;
+							stream << EncWordP[i] << EncWordP[i + 1];
+							int c;
+							stream >> c;
+							nums.push_back(c);
+						}
+						string text = polibdec(nums);
+						cout << "Дешифрованное сообщение: "<< text;
+						break;
+					}
+						default:
+							break;
+					}
 
 				}
 				default:
@@ -318,8 +360,17 @@ int main() {
 					}
 						vector<int>EncWordP = polibenc(textp);
 						ofstream fout("polibout.txt", ios_base::trunc);
+						int t = 0;
 						for (int n : EncWordP) {
-							fout << n;
+							if (t == 0) {
+								fout << n;
+								t++;
+							}
+							else {
+								fout << n << ' ';
+								t--;
+							}
+
 						}
 						fout.close();
 						system("pause");
@@ -327,18 +378,26 @@ int main() {
 						break;
 					}
 				case(2): {
-
-
+					ifstream fin("polibout.txt");
+					vector<int> nums;
+					while (!fin.eof()) {
+						int n;
+						fin >> n;
+						nums.push_back(n);
+					}
+					
+					string text =polibdec(nums);
+					text[text.size()-1] = ' ';
+					ofstream fout("polibout.txt",ios_base::trunc);
+					fout << text;
+					fout.close();
+					break;
 				}
 				default:
 					break;
 				}
-
-
-
-
-
 				cout << "=====================================================" << "\n";
+				system("cls");
 				break;
 			}
 			case (3): {

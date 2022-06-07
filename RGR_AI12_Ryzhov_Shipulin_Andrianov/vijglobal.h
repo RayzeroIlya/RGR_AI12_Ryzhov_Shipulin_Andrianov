@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 bool alphacheck(int shifr, char symbol);
 using namespace std;
 extern vector<char>CaseEng;

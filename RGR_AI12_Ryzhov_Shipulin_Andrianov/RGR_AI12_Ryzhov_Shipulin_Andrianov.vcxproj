@@ -144,6 +144,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="isReg.cpp" />
     <ClCompile Include="keycheck.cpp" />
+    <ClCompile Include="polibdec.cpp" />
     <ClCompile Include="polibenc.cpp" />
     <ClCompile Include="caesarenc.cpp" />
     <ClCompile Include="VijDec.cpp" />

@@ -45,6 +45,9 @@
     <ClCompile Include="alphacheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="polibdec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vijglobal.h">
