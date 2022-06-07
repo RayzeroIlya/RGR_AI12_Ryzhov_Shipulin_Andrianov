@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
-
+#include <fstream>
 using namespace std;
 extern vector<char>CaseEng;
 extern vector<char>CaseEngLow ;

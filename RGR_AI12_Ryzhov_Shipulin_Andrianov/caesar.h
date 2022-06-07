@@ -3,4 +3,5 @@
 #include <windows.h>
 #include <conio.h>
 using namespace std;
-void caesar();
+char *caesar(char msg[80]);
+char *caesardec(char msg[80]);

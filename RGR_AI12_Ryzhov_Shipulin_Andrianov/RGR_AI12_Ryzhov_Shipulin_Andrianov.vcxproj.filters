@@ -33,10 +33,13 @@
     <ClCompile Include="keycheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="polib.cpp">
+    <ClCompile Include="polibenc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="caesar.cpp">
+    <ClCompile Include="caesarenc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="caesardec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

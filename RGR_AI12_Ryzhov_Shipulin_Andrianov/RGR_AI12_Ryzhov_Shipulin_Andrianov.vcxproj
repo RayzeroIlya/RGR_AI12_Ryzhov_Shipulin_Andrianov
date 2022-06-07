@@ -139,11 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="caesardec.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="isReg.cpp" />
     <ClCompile Include="keycheck.cpp" />
-    <ClCompile Include="polib.cpp" />
-    <ClCompile Include="caesar.cpp" />
+    <ClCompile Include="polibenc.cpp" />
+    <ClCompile Include="caesarenc.cpp" />
     <ClCompile Include="VijDec.cpp" />
     <ClCompile Include="VijTable.cpp" />
     <ClCompile Include="VijEnc.cpp" />

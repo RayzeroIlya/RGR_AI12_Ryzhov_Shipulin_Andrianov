@@ -2,4 +2,4 @@
 #include <iomanip>
 #include <iostream>
 using namespace std;
-void polib();
+char* polibenc(char* string);

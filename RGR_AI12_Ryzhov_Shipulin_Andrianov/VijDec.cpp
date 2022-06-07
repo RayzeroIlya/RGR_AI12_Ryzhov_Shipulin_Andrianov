@@ -1,7 +1,7 @@
 #include "vijglobal.h"
 #include "isReg.h"
 
-void decrypt(string key, string wordfodec) {
+string decrypt(string key, string wordfodec) {
 
 	string DecWord;
 	int IndexKey = 0;
@@ -41,4 +41,5 @@ void decrypt(string key, string wordfodec) {
 		}
 	}
 	cout << "Дешифрованный текст: " << DecWord << endl;
+	return DecWord;
 }
